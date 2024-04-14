@@ -11,6 +11,8 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		C37A22AA2BCB1A2200F7CB8D /* poppins_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C37A22A82BCB1A2200F7CB8D /* poppins_semibold.ttf */; };
+		C37A22AB2BCB1A2200F7CB8D /* poppins_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C37A22A92BCB1A2200F7CB8D /* poppins_regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		C37A22A82BCB1A2200F7CB8D /* poppins_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poppins_semibold.ttf; sourceTree = "<group>"; };
+		C37A22A92BCB1A2200F7CB8D /* poppins_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poppins_regular.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				C37A22A92BCB1A2200F7CB8D /* poppins_regular.ttf */,
+				C37A22A82BCB1A2200F7CB8D /* poppins_semibold.ttf */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -151,7 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */,
+				C37A22AB2BCB1A2200F7CB8D /* poppins_regular.ttf in Resources */,
 				058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */,
+				C37A22AA2BCB1A2200F7CB8D /* poppins_semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

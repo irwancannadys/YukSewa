@@ -1,16 +1,30 @@
 package presentation.home.component
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material3.Card
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ConstraintLayout
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.painterResource
+import yuksewa.composeapp.generated.resources.Res
+import yuksewa.composeapp.generated.resources.compose_multiplatform
+import yuksewa.composeapp.generated.resources.poppins_semibold
 
 
 @Composable
@@ -25,11 +39,11 @@ fun TransportationComponent() {
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
-                text = "Transportation"
+                text = "Transportation",
             )
 
             Text(
-                text = "Lihat Semua"
+                text = "Transportation"
             )
         }
 
@@ -45,16 +59,40 @@ fun TransportationComponent() {
     }
 }
 
+@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun TransportationItem() {
 
+    ConstraintLayout(
+        modifier = Modifier.height(166.dp).width(200.dp).background(Color.Red)
+    ) {
+        val (contentCard, imageCard) = createRefs()
 
+        Column(
+            modifier = Modifier.constrainAs(contentCard) {
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+                top.linkTo(parent.top)
+            }
+                .height(143.dp)
+                .fillMaxWidth()
+                .background(Color.Blue)
+        ) {
+            Text(
+                text = "Transportation",
+//                fontFamily = FontFamily(Font(Res.font.poppins_semibold))
+            )
+        }
 
-
-    Card {
-        Text(
-            modifier = Modifier.padding(16.dp),
-            text = "Mobil"
+        Image(
+            painter = painterResource(Res.drawable.compose_multiplatform),
+            contentDescription = null,
+            modifier = Modifier.constrainAs(imageCard) {
+                bottom.linkTo(parent.bottom)
+                end.linkTo(parent.end)
+            }
+                .height(100.dp)
+                .background(Color.Green)
         )
     }
 }

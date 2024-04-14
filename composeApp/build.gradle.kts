@@ -28,15 +28,13 @@ kotlin {
     }
     
     sourceSets {
-        
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.android)
             implementation(libs.decompose)
             implementation(libs.koin.android)
-            implementation(libs.androidx.constraintlayout.compose)
-            
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -46,7 +44,6 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.constraintlayout.compose)
 
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.serialization.json)
@@ -63,6 +60,8 @@ kotlin {
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(project.dependencies.platform(libs.koin.bom))
+
+            implementation("tech.annexflow.compose:constraintlayout-compose-multiplatform:0.3.1")
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
@@ -77,6 +76,7 @@ android {
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
+    sourceSets["main"].res.srcDirs("src/commonMain/resources")
 
     defaultConfig {
         applicationId = "org.wizard.yuksewa"
