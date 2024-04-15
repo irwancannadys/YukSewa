@@ -10,23 +10,26 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.material3.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import common_theme.Poppins12Regular
+import common_theme.Poppins16SemiBold
+import common_theme.Poppins22SemiBold
 import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import yuksewa.composeapp.generated.resources.Res
 import yuksewa.composeapp.generated.resources.compose_multiplatform
-import yuksewa.composeapp.generated.resources.poppins_semibold
+import yuksewa.composeapp.generated.resources.poppins_regular
 
 
+@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun TransportationComponent() {
 
@@ -39,11 +42,13 @@ fun TransportationComponent() {
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
-                text = "Transportation",
+                text = "Destinations",
+                fontFamily = FontFamily(Font(Res.font.poppins_regular)),
+                fontSize = 12.sp
             )
 
             Text(
-                text = "Transportation"
+                text = "Lihat Semua"
             )
         }
 
@@ -80,7 +85,7 @@ fun TransportationItem() {
         ) {
             Text(
                 text = "Transportation",
-//                fontFamily = FontFamily(Font(Res.font.poppins_semibold))
+                style = Poppins22SemiBold()
             )
         }
 
